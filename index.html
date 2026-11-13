@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Proyectos 08 - spa & beauty</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-principal">
+    <div class="logo__text">
+      <span class="glow">Glow</span><span class="queen">Queen</span>
+    </div>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li class="desplegable">
+          <a href="#">more<span class="arrow">∨</span></a>
+          <ul class="submenu">
+            <li><a href="#">opción 1</a></li>
+            <li><a href="#">opcion 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="users">
+      <button class="icon-search">
+        <img src="./img/Search.svg" alt="Search Icon">
+      </button>
+      <button class="icon-bag">
+        <img src="./img/Shopping Bag.svg" alt="Bag Icon">
+      </button>
+
+      <a href="#" class="btn-sign-in">Sign In</a>
+      <a href="#" class="btn-sign-up">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- 🟢 CLASE AGREGADA AQUÍ PARA ENLAZAR CON EL HERO SASS -->
+  <main class="contenedor-hero-global">
+    <section class="container-hero-left">
+      <h1 class="hero__title">Bring back the beauty and glow of your skin</h1>
+      <p>We provide you various treatments from head to toe using the best product, advanced technology, and affordable price</p>
+
+      <div class="container-buttons">
+        <a href="#" class="btn">Book Now</a>
+        <button class="btn-watch-video">
+          <span class="play-icon">
+            <img src="./img/play.svg" alt="Play Icon">
+          </span> Watch Video
+        </button>
+      </div>
+
+      <div class="numbers">
+        <div class="special-treatment">
+          <img src="./img/girl.svg" alt="girl">
+          <span class="number">15+</span>
+          <span class="label">Special Treatment</span>
+        </div>
+
+        <div class="professional-therapist">
+          <img src="./img/flor.svg" alt="flor">
+          <span class="number">25+</span>
+          <span class="label">Professional Therapist</span>
+        </div>
+
+        <div class="Herbal-Cream-Formula">
+          <img src="./img/bowl.svg" alt="flor">
+          <span class="number">100%</span>
+          <span class="label">Herbal Cream Formula</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-hero-right">
+      <img src="./img/Vector.svg" alt="" class="loto-fondo">
+      <!-- Unificado a hero-image para evitar problemas de nesting -->
+      <img src="./img/beauty-woman.png" alt="model beauty" class="hero-image">
+      
+      <div class="tarjeta-testimonio tarjeta-sophia">
+        <img src="./img/comillas.svg" alt="comillas">
+        <p class="testimonio">I have been a regular customer of Glow Queen for several years, and I can confidently say that their services are top-notch. The staff is friendly and professional, and the treatments are always effective. I highly recommend Glow Queen to anyone looking for quality beauty services.</p>
+        <p class="nombre">Sophia Princeton</p>
+      </div>
+
+      <div class="tarjeta-testimonio tarjeta-tamara">
+        <img src="./img/comillas.svg" alt="comillas">
+        <p class="testimonio">For the past few years, I've had a hard time finding the right place for skin care to deal with my complicated skin condition, thank God I found GlowQueen to treat my skin</p>
+        <p class="nombre">Tamara Jules</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

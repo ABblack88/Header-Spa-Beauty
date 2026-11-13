@@ -1,0 +1,126 @@
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 0 0 0 10%; 
+    background-color: $white;
+    width: 100%;
+    box-sizing: border-box;
+
+    .logo__text {
+        font-size: 24px;
+        font-family: $primary-font;
+    
+        .glow { 
+        color: $Dark-Blue; 
+        font-weight: 700; 
+        }
+        .queen { 
+        color: $Cyan; // El color verde menta de tu marca
+        font-weight: 500; 
+        }
+    }
+}
+
+
+.navbar {
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 35px; // Espaciado horizontal uniforme entre los enlaces
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $Gray2;
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        text-transform: capitalize; // Fuerza la primera letra en mayúscula si se desea
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $Dark-Blue;
+        }
+    }
+
+    // Comportamiento interactivo del menú desplegable "More"
+    .desplegable {
+        position: relative;
+
+            &:hover {
+                .submenu {
+                    display: flex; // Despliega la cajita al pasar el mouse por encima
+                }
+            }
+
+            .arrow {
+                font-size: 0.75em;
+                margin-left: 2px;
+                color: $Gray2;
+            }
+
+      // Caja oculta del submenú
+            .submenu {
+                display: none; // Oculto por defecto
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $white;
+                box-shadow: 0 4px 15px rgba($Dark-Blue, 0.08); // Sombra suave estética
+                padding: 10px 0;
+                min-width: 150px;
+                border-radius: 8px;
+                z-index: 110;
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+
+                    a {
+                        padding: 10px 20px;
+                        display: block;
+                        font-size: 14px;
+                        width: 100%;
+
+                        &:hover {
+                            background-color: #f8f9fa;
+                            color: $Dark-Blue;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: $Cyan; 
+    height: 100%; 
+    padding: 0 50px; 
+
+    .icon-search {
+        background: transparent;
+        border: none;
+        color: $Dark-Blue;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .icon-bag {
+        background: transparent;
+        border: none;
+        color: $Dark-Blue;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}

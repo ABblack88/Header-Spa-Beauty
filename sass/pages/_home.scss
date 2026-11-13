@@ -1,0 +1,185 @@
+.contenedor-hero-global {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 120px); // Resta la altura del header
+    background-color: $white;
+}
+.container-hero-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 5% 60px 10%;
+    box-sizing: border-box;
+
+    .hero__title {
+        font-size: 48px;
+        font-weight: 700;
+        color: $Dark-Blue;
+        line-height: 1.2;
+        margin: 0 0 20px 0;
+        max-width: 500px;
+    }
+
+    p {
+        color: $Gray2;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 35px 0;
+        max-width: 480px;
+    }
+}
+  // Contenedor de Botones (Book Now + Watch Video)
+.container-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 60px;
+
+    .btn {
+        background-color: $Dark-Blue;
+        color: $white;
+        padding: 14px 35px;
+        border-radius: 50px;
+        font-weight: 700;   
+        font-size: 15px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: lighten($Dark-Blue, 8%);
+        }
+    }
+
+    .btn-watch-video {
+        display: flex;
+        align-items: center; 
+        gap: 12px;
+        font-size: 15px;
+        color: $Dark-Blue;
+        font-weight: 500;
+
+    .play-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background-color: $white ;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+    
+        img { width: 14px; height: 14px; }
+    }
+
+        &:hover .play-icon {
+            transform: scale(1.08);
+        }
+    }
+}
+
+
+.numbers {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+
+    // Engloba tus tres clases HTML en una sola regla ordenada
+    .special-treatment,
+    .professional-therapist,
+    .Herbal-Cream-Formula {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 12px;
+        }
+
+        .number {
+            font-size: 26px;
+            font-weight: 700;
+            color: $Dark-Blue;
+            line-height: 1.2;
+        }
+
+        .label {
+            font-size: 13px;
+            color: $Gray2;
+            margin-top: 5px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+}
+
+
+.container-hero-right {
+    position: relative;
+    width: 50%;
+    background-color: $Cyan;
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .loto-fondo {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 75%;
+        opacity: 0.15;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .tarjeta-testimonio {
+        position: absolute;
+        background-color: rgba($white, 0.85);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 24px;
+        max-width: 320px;
+        box-shadow: 0 10px 30px rgba($Dark-Blue, 0.06);
+        z-index: 10;
+
+        img {
+        width: 25px;
+        margin-bottom: 12px;
+        display: block;
+        }
+
+        .testimonio {
+        font-size: 13.5px;
+        color: $Dark-Blue;
+        line-height: 1.5;
+        margin: 0 0 12px 0;
+        font-weight: 500;
+        }
+
+        .nombre {
+        font-size: 14px;
+        font-weight: 700;
+        color: $Dark-Blue;
+        margin: 0;
+        }
+    }
+
+    .tarjeta-sophia {
+        top: 40%;
+        right: 5%;
+    }
+
+    .tarjeta-tamara {
+        bottom: 5%;
+        left: 5%;
+    }
+}
+
