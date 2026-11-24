@@ -21,7 +21,7 @@
   <meta name="theme-color" content="#fafafa">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +37,8 @@
         <li><a href="#">Services</a></li>
         <li><a href="#">Facilities</a></li>
         <li class="desplegable">
-          <a href="#">more<span class="arrow">∨</span></a>
+          <a href="#">more</a>
+          <img src="img/chevron-down.svg" alt="Chevron Down Icon" class="chevron-down">
           <ul class="submenu">
             <li><a href="#">opción 1</a></li>
             <li><a href="#">opcion 2</a></li>
@@ -59,7 +60,6 @@
     </div>
   </header>
 
-  <!-- 🟢 CLASE AGREGADA AQUÍ PARA ENLAZAR CON EL HERO SASS -->
   <main class="contenedor-hero-global">
     <section class="container-hero-left">
       <h1 class="hero__title">Bring back the beauty and glow of your skin</h1>
@@ -68,9 +68,8 @@
       <div class="container-buttons">
         <a href="#" class="btn">Book Now</a>
         <button class="btn-watch-video">
-          <span class="play-icon">
-            <img src="./img/play.svg" alt="Play Icon">
-          </span> Watch Video
+          <span class="play-icon" aria-label="Play video"></span>
+          <span class="watch-text">Watch Video</span>
         </button>
       </div>
 
@@ -102,7 +101,7 @@
       
       <div class="tarjeta-testimonio tarjeta-sophia">
         <img src="./img/comillas.svg" alt="comillas">
-        <p class="testimonio">I have been a regular customer of Glow Queen for several years, and I can confidently say that their services are top-notch. The staff is friendly and professional, and the treatments are always effective. I highly recommend Glow Queen to anyone looking for quality beauty services.</p>
+        <p class="testimonio">I have a regular schedule to take treatment from GlowQueen, they gave me the best service and treatment ever to maintain the beauty and health of my skin</p>
         <p class="nombre">Sophia Princeton</p>
       </div>
 

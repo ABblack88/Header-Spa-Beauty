@@ -1,48 +1,73 @@
 .contenedor-hero-global {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 120px); // Resta la altura del header
-    background-color: $white;
+    position: relative;
+    display: block;
+    width: 1920px;
+    height: 1080px;
+    margin: -120px 0 0;
+    overflow: hidden;
+    color: $Gray1;
+    background-color: $White1;
+    background-image:
+        linear-gradient(to bottom, $Gray1 0 820px, $White1 820px 1080px),
+        linear-gradient(to bottom, $Cyan 0 820px, $White1 820px 1080px);
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    background-size: 1285px 1080px, 635px 1080px;
 }
+
 .container-hero-left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 5% 60px 10%;
-    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
 
     .hero__title {
-        font-size: 48px;
-        font-weight: 700;
+        position: absolute;
+        top: 200px;
+        left: 160px;
+        width: 809px;
+        margin: 0;
         color: $Dark-Blue;
-        line-height: 1.2;
-        margin: 0 0 20px 0;
-        max-width: 500px;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 80px;
     }
 
-    p {
+    > p {
+        position: absolute;
+        top: 392px;
+        left: 160px;
+        width: 760px;
+        margin: 0;
         color: $Gray2;
-        font-size: 16px;
-        line-height: 1.6;
-        margin: 0 0 35px 0;
-        max-width: 480px;
+        font-size: 24px;
+        line-height: 40px;
     }
 }
-  // Contenedor de Botones (Book Now + Watch Video)
+
 .container-buttons {
+    position: absolute;
+    top: 528px;
+    left: 160px;
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 60px;
+    gap: 32px;
+    margin: 0;
 
     .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 60px;
+        padding: 0;
+        border-radius: 32px;
+        color: $White1;
         background-color: $Dark-Blue;
-        color: $white;
-        padding: 14px 35px;
-        border-radius: 50px;
-        font-weight: 700;   
-        font-size: 15px;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
         transition: background-color 0.2s ease;
 
         &:hover {
@@ -52,25 +77,42 @@
 
     .btn-watch-video {
         display: flex;
-        align-items: center; 
-        gap: 12px;
-        font-size: 15px;
-        color: $Dark-Blue;
-        font-weight: 500;
-
-    .play-icon {
-        display: flex;
         align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        background-color: $white ;
-        border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s ease;
-    
-        img { width: 14px; height: 14px; }
-    }
+        gap: 16px;
+        width: 240px;
+        height: 60px;
+        padding: 0 0 0 16px;
+        border: none;
+        border-radius: 16px;
+        color: $Dark-Blue;
+        background: transparent;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+
+        .play-icon {
+            position: relative;
+            display: flex;
+            flex: 0 0 48px;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $White1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+
+            &::before {
+                width: 0;
+                height: 0;
+                margin-left: 6px;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 14px solid $Dark-Blue;
+                content: "";
+            }
+        }
 
         &:hover .play-icon {
             transform: scale(1.08);
@@ -78,108 +120,135 @@
     }
 }
 
-
 .numbers {
+    position: absolute;
+    top: 678px;
+    left: 160px;
+    z-index: 4;
     display: flex;
-    gap: 40px;
-    margin-top: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 643px;
+    height: 284px;
+    margin: 0;
+    padding: 32px;
+    border-radius: 16px;
+    color: $White1;
+    background-color: rgba($White1, 0.8);
+    backdrop-filter: blur(8px);
 
-    // Engloba tus tres clases HTML en una sola regla ordenada
     .special-treatment,
     .professional-therapist,
     .Herbal-Cream-Formula {
         display: flex;
+        flex: 0 0 145px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        filter: drop-shadow(0 24px 25px rgba(0, 0, 0, 0.05));
 
         img {
-            width: 45px;
-            height: 45px;
-            margin-bottom: 12px;
+            width: 72px;
+            height: 72px;
+            margin-bottom: 24px;
         }
 
         .number {
-            font-size: 26px;
-            font-weight: 700;
             color: $Dark-Blue;
-            line-height: 1.2;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 1.5;
         }
 
         .label {
-            font-size: 13px;
+            max-width: 145px;
+            margin-top: 16px;
             color: $Gray2;
-            margin-top: 5px;
-            font-weight: 500;
-            white-space: nowrap;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: normal;
         }
     }
 }
 
-
 .container-hero-right {
-    position: relative;
-    width: 50%;
-    background-color: $Cyan;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
 
     .hero-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        position: relative;
+        position: absolute;
+        top: -59px;
+        left: 361px;
         z-index: 2;
+        width: 1639px;
+        height: 1229px;
+        max-width: none;
+        object-fit: cover;
     }
 
     .loto-fondo {
         position: absolute;
-        top: 15%;
-        left: 10%;
-        width: 75%;
-        opacity: 0.15;
+        top: 108.53px;
+        left: 1212.25px;
         z-index: 1;
+        width: 472.5px;
+        height: auto;
         pointer-events: none;
     }
 
     .tarjeta-testimonio {
         position: absolute;
-        background-color: rgba($white, 0.85);
-        backdrop-filter: blur(8px);
-        border-radius: 16px;
-        padding: 24px;
-        max-width: 320px;
-        box-shadow: 0 10px 30px rgba($Dark-Blue, 0.06);
         z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 405px;
+        height: 247px;
+        min-height: 0;
+        max-width: none;
+        padding: 24px;
+        border-radius: 16px;
+        background-color: rgba($White1, 0.5);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 30px rgba($Dark-Blue, 0.06);
 
         img {
-        width: 25px;
-        margin-bottom: 12px;
-        display: block;
+            display: block;
+            width: 32px;
         }
 
         .testimonio {
-        font-size: 13.5px;
-        color: $Dark-Blue;
-        line-height: 1.5;
-        margin: 0 0 12px 0;
-        font-weight: 500;
+            width: 357px;
+            margin: 0;
+            color: #070d15;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: normal;
         }
 
         .nombre {
-        font-size: 14px;
-        font-weight: 700;
-        color: $Dark-Blue;
-        margin: 0;
+            align-self: flex-start;
+            width: max-content;
+            margin: 0;
+            color: $Dark-Blue;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            white-space: nowrap;
         }
     }
 
     .tarjeta-sophia {
-        top: 40%;
-        right: 5%;
+        top: 435px;
+        left: 1449px;
     }
 
     .tarjeta-tamara {
-        bottom: 5%;
-        left: 5%;
+        top: 747px;
+        left: 1309px;
     }
 }
-
